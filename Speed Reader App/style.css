@@ -1,0 +1,33 @@
+#page1{
+  background: #97DBAE;
+  text-align: center;
+  color:
+}
+  /* Error Massage */
+  #error{
+    background-color:  #4CAF50;
+    width: 50%;
+    margin: 20px auto;
+  font-size: 20px;
+  }
+  h1 {
+    font-family: 'Fugaz One', cursive;
+    color: #0E185F;
+  }
+  p{
+    font-family: 'Merienda', cursive;
+    color: #712B75;
+  }
+  /* Read word */
+  #result{
+    font-size: 50px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 5% 0%;
+  }
+
+.full-width-slider input {
+  display: none; important;
+}
+.full-width-slider .ui-slider-track {
+  margin-left: 15px;
+}

@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Speed Reader App </title>
+  </head>
+  <body>
+    <!-- page 1 -->
+    <div data-role ="page" id="page1">
+      <div data-role = "header">
+
+
+
+      </div>
+       <!-- Title -->
+      <div role="main"  class="ui-content">
+        <div class="header">
+          <h1>Speed Reader</h1>
+          <p>For an efficient reading experience</p>
+        </div>
+           <div id="controls">
+
+
+              <div class="ui-grid-a">
+                <div class="ui-block-a">
+                  <div class="">
+                    Font Size: <span id="fontsize">50</span> px.
+                  </div>
+
+                </div>
+                  <div class="ui-block-b">
+                    <span id="speed">300</span> words per minute.
+
+                  </div>
+
+              </div>
+
+
+
+               <!-- Font size and Speed -->
+               <div class="ui-grid-a">
+                 <div class="ui-block-a">
+                      <form class="full-width-slider">
+                         
+                         <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight= "true">
+                      </form>
+                 </div>
+                 <div class="ui-block-b">
+                    <form class="full-width-slider">
+    
+                       <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="30" step="50" data-highlight= "true">
+                    </form>
+
+                 </div>
+
+               </div>
+
+               <!-- progress -->
+               <form class="full-width-slider">
+    <label for="slider-12" >Progress: <span id="percentage">0</span>%</label>
+    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight= "true">
+</form>
+         </div>
+
+         <!-- The read word -->
+         <div id="result">
+           word
+
+         </div>
+          <!-- Error Massage -->
+        <div id="error">
+           <p>Please insert text into the box </p>
+        </div>
+          <!-- User input -->
+          <div class="" id="input">
+            <textarea id="userInput" rows="8" cols="80"></textarea>
+            <!-- button -->
+            <button type="button" name="button" id="start">Start Reading</button>
+            <button type="button" name="button" id="new">New </button>
+            <button type="button" name="button" id="pause">Pause</button>
+            <button type="button" name="button" id="resume"> Resume</button>
+
+          </div>
+
+      </div>
+      <div data-role = "footer" data-position = "fixed">
+        <div data-role="navbar">
+          <ul>
+              <li><a href="#page1" data-transition ="pop" data-icon="home" class="ui-btn-active">Home</a></li>
+            <li><a href="#page2" data-transition ="flip" data-icon="info" >About</a></li>
+            <li><a href="#page3" data-transition ="flip" data-icon="mail" >Contact</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End of page1 -->
+
+
+
+
+
+
+    <!-- page 2 -->
+      <div data-role ="page" id="page2" data-theme= "a" >
+        <div data-role = "header">
+
+        </div>
+        <div role="main"  class="ui-content">
+            <ul data-role ="listview" data-filter = "true">
+              <li data-role ="list-divivder"> Main Information</li>
+              <li><a href="#"> <img src="closed.png" alt=""> My Portfolio</a></li>
+              <li><a href="#"> <img src="icons8-services.gif" alt="">My Portfolio</a></li>
+              <li data-role ="list-divivder"> Branches </li>
+              <li><img src="clock.png" alt="">
+                <h1>Kolkata</h1>
+                <p>Development Team</p>
+              </li>
+              <li><img src="clock.png" alt="">
+                <h1>Berhampore</h1>
+                <p>Management Team</p>
+              </li>
+              <li><a href="#">My Portfolio</a></li>
+              <li><a href="#">My Portfolio</a></li>
+              <li data-role ="list-divivder">Achievement </li>
+              <li><a href="#">My Portfolio</a></li>
+              <li><a href="#">My Portfolio</a></li>
+            </ul>
+        </div>
+        <div data-role = "footer" data-position = "fixed">
+          <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-transition ="pop" data-icon="home" class="ui-btn-active">Home</a></li>
+              <li><a href="#page2" data-transition ="flip" data-icon="info" >About</a></li>
+              <li><a href="#page3" data-transition ="flip" data-icon="mail" >Contact</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+       <!-- End of page 2 -->
+       <!-- page 3 -->
+         <div data-role ="page" id="page3" data-theme= "a" >
+           <div data-role = "header">
+
+           </div>
+           <div role="main"  class="ui-content">
+             <div class="ui-grid-b">
+               <div class="ui-block-a">
+                 <a href="#" data-role="button">Email</a>
+                 <p>Hey feel free to write me any query. I will be in touch as quick as posiblbe</p>
+
+               </div>
+               <div class="ui-block-b">
+                 <a href="#" data-role="button">Live Chat</a>
+                 <p>Hey feel free to write me any query. I will be in touch as quick as posiblbe</p>
+
+               </div>
+               <div class="ui-block-c">
+                 <a href="#" data-role="button">Phone</a>
+                 <p>Hey feel free to write me any query. I will be in touch as quick as posiblbe</p>
+
+               </div>
+
+             </div>
+
+           </div>
+           <div data-role = "footer" data-position = "fixed">
+             <div data-role="navbar">
+               <ul>
+                   <li><a href="#page1" data-transition ="pop" data-icon="home">Home</a></li>
+                 <li><a href="#page2" data-transition ="flip" data-icon="info"   >About</a></li>
+                 <li><a href="#page3" data-transition ="flip" data-icon="mail" class="ui-btn-active" >Contact</a></li>
+               </ul>
+
+             </div>
+
+           </div>
+
+         </div>
+          <!-- End of page 3 -->
+     <script src="index.js">
+
+     </script>
+  </body>
+</html>
